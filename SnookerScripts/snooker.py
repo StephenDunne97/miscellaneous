@@ -13,8 +13,10 @@ colours = {
 
 def calc_max(detail="n"):
     total = 0
+    # Calc value after potting all red balls with the black ball
     for x in reds:
         total = total + (x + colours.get("black"))    
+    # Calc value after potting all coloured balls 
     total = total + calc_colours()
     print("Highest possible score:", total)
     if detail != "n":
